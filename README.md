@@ -21,5 +21,5 @@ Point your domain (casestack.tools / casestack.io — verify availability at che
 - The Exhibit A terminal block is static. The weekend upgrade: wire it to the
   live epstein-data.com Datasette JSON endpoint so visitors can run a real
   query. Host-agnostic client-side fetch — Netlify is fine.
-- The 78,000-removed-documents numbers in Exhibit A are from your real finding;
-  tighten the wording to match exactly what you published before shipping.
+- The ~64,000-removed-documents numbers in the PROOF block are from the real
+  finding; tighten the wording to match exactly what was published.
