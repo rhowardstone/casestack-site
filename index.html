@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CaseStack — Document forensics for investigations too big to read by hand</title>
+<meta name="description" content="Send me your corpus — FOIA dumps, court records, leaked archives. I return a sourced findings memo with stable document IDs, reproducible queries, and alteration forensics. You keep the byline.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23f7f4ec'/%3E%3Crect x='5' y='8' width='22' height='4' fill='%231a1812'/%3E%3Crect x='5' y='15' width='22' height='4' fill='%23a8231b'/%3E%3Crect x='5' y='22' width='14' height='4' fill='%231a1812'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,700;1,6..72,400&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ====== FILE STUB ====== -->
+<header class="filestub" role="banner">
+  <span>CASESTACK</span>
+  <span class="filestub-sep" aria-hidden="true">·</span>
+  <span>DOCUMENT FORENSICS</span>
+  <span class="filestub-status">ACCEPTING ENGAGEMENTS</span>
+</header>
+
+<main>
+
+<!-- ====== HERO ====== -->
+<section class="hero">
+  <div class="hero-photo">
+    <img src="assets/rye.jpeg" alt="Rye Howard-Stone" width="148" height="148">
+    <span class="photo-tag">RYE HOWARD-STONE</span>
+  </div>
+  <div class="hero-text">
+    <h1>Document forensics for investigations too&nbsp;big to read by&nbsp;hand.</h1>
+    <p class="lede">I run your corpus — FOIA dumps, court records, leaked archives, public-records scrapes — and return a sourced findings memo with stable document IDs, reproducible queries, and alteration forensics. You keep the byline. You verify everything.</p>
+    <div class="cta-row">
+      <a class="btn-primary" href="https://calendly.com/rhowardstone/30min">Book a free 30-minute call</a>
+      <span class="cta-note">Free. We scope your corpus and your question.</span>
+    </div>
+  </div>
+</section>
+
+<!-- ====== EXHIBIT A: the proof artifact ====== -->
+<section class="exhibit" aria-labelledby="exhibit-label">
+  <div class="exhibit-head">
+    <span id="exhibit-label" class="section-tag">PROOF</span>
+    <span class="exhibit-caption">What reading the whole corpus surfaces — an actual finding.</span>
+  </div>
+  <figure class="terminal">
+    <pre><code><span class="t-prompt">$</span> casestack scan --case doj-epstein-2025 --check gaps
+<span class="t-dim">comparing document identifier sequence across federal releases…</span>
+
+  <span class="t-finding">FINDING</span>   ~78,000 identifiers present in the Release 1 index
+            are absent from Release 2. Removed without notice.
+  <span class="t-finding">SCOPE</span>     1,380,000 documents / ~3,000,000 pages — full read, not sampled.
+  <span class="t-finding">METHOD</span>    deterministic identifier-sequence diff. Reproducible:
+            <span class="t-cmd">casestack scan --check gaps --diff release1 release2</span></code></pre>
+    <figcaption>
+      Surfaced on <a href="https://epstein-data.com">epstein-data.com</a> — the 218&nbsp;GB DOJ release, made full-text searchable and used by reporters at WIRED and NPR. A person can't read 3 million pages. The machine can. Every claim it returns carries a stable document ID and a query you can re-run.
+    </figcaption>
+  </figure>
+</section>
+
+<!-- ====== WHO ====== -->
+<section class="block">
+  <h2><span class="section-tag">§ 01</span> Who this is for</h2>
+  <ul class="ruled">
+    <li>Solo investigative journalists and 2–8 person newsrooms sitting on a document set too large to read before deadline.</li>
+    <li>Independent and Substack investigators competing against better-resourced outlets.</li>
+    <li>Anyone holding a FOIA release, court archive, or leak that contains a story they can't physically extract alone.</li>
+  </ul>
+</section>
+
+<!-- ====== WHAT YOU GET ====== -->
+<section class="block">
+  <h2><span class="section-tag">§ 02</span> What you get</h2>
+  <ul class="ruled">
+    <li><strong>A sourced findings memo</strong> — every claim tied to a stable document ID, a reproducible query, and a page reference.</li>
+    <li><strong>A searchable full-text database of your corpus</strong> — the same engine behind epstein-data.com, pointed at your documents. <span class="mono-note">Built on <a href="https://github.com/rhowardstone/casestack">CaseStack</a>, open source.</span></li>
+    <li><strong>Alteration &amp; gap forensics</strong> where applicable — what was removed, changed, or is missing, with a methodology you can print.</li>
+  </ul>
+</section>
+
+<!-- ====== HOW IT WORKS ====== -->
+<section class="block">
+  <h2><span class="section-tag">§ 03</span> How it works</h2>
+  <ol class="steps">
+    <li><span class="step-no">01</span> Send me the corpus — or where it lives — and the question you're chasing.</li>
+    <li><span class="step-no">02</span> I run it and return the findings memo with stable citations.</li>
+    <li><span class="step-no">03</span> You verify, you publish, you keep the byline. The methodology stays open.</li>
+  </ol>
+</section>
+
+<!-- ====== PRICING ====== -->
+<section class="block" id="pricing">
+  <h2><span class="section-tag">§ 04</span> Engagements</h2>
+  <div class="tiers">
+    <div class="tier">
+      <h3>Search Build</h3>
+      <p class="tier-price">$400 <span>flat</span></p>
+      <p>Your document set — up to a few thousand pages — ingested, deduplicated, OCR'd, and handed back as a searchable database, with a 20-minute orientation. The fast one.</p>
+      <a class="btn-secondary" href="https://buy.stripe.com/28EdRb1xa411cLw5XPdIA00">Buy now</a>
+    </div>
+    <div class="tier tier-featured">
+      <h3>Findings Memo</h3>
+      <p class="tier-price">from $1,500 <span>scoped on the call</span></p>
+      <p>The full forensic pass: entity linking, deduplication, gap and alteration analysis, and a sourced memo where every claim is citable and reproducible. Journalism-grade output.</p>
+      <a class="btn-secondary" href="https://calendly.com/rhowardstone/30min">Book the call</a>
+    </div>
+    <div class="tier">
+      <h3>Large corpus / commercial</h3>
+      <p class="tier-price">Custom <span>quoted after scoping</span></p>
+      <p>Hundred-gigabyte-class releases, ongoing engagements, or running CaseStack commercially in-house. We scope it together on the call.</p>
+      <a class="btn-secondary" href="https://calendly.com/rhowardstone/30min">Book the call</a>
+    </div>
+  </div>
+</section>
+
+<!-- ====== ABOUT ====== -->
+<section class="block about">
+  <h2><span class="section-tag">§ 05</span> Who's doing the work</h2>
+  <p>I built <a href="https://epstein-data.com">epstein-data.com</a> — 1.38&nbsp;million documents, roughly 3&nbsp;million pages, full-text searchable, used by reporters at WIRED and NPR. I found 78,000 documents silently removed from a federal release, because I could read the whole corpus and a person can't. I hold a PhD in computer science and have spent a decade on large-scale document and sequence analysis. Everything here is done by me, not outsourced.</p>
+</section>
+
+<!-- ====== FAQ ====== -->
+<section class="block">
+  <h2><span class="section-tag">§ 06</span> Questions</h2>
+  <dl class="faq">
+    <dt>How long does it take?</dt>
+    <dd>Scoped on the call — it depends on corpus size and the question. Small sets turn around in days.</dd>
+    <dt>What do you need from me?</dt>
+    <dd>The documents (or portal access) and the question you're chasing.</dd>
+    <dt>Can my editor trust the output?</dt>
+    <dd>Every claim carries a stable document ID and a reproducible query. You verify before you print; the methodology is open.</dd>
+    <dt>What if my document set is huge, weird, or encrypted?</dt>
+    <dd>That's the normal case. Book the call and we'll scope it.</dd>
+  </dl>
+</section>
+
+<!-- ====== FINAL CTA ====== -->
+<section class="final-cta">
+  <p class="final-line">If you're sitting on documents you can't read in time, the story doesn't wait.</p>
+  <a class="btn-primary" href="https://calendly.com/rhowardstone/30min">Book a free 30-minute call</a>
+</section>
+
+</main>
+
+<footer class="filestub footer">
+  <span>CASESTACK</span>
+  <span class="filestub-sep" aria-hidden="true">·</span>
+  <a href="https://github.com/rhowardstone/casestack">github.com/rhowardstone/casestack</a>
+  <span class="filestub-sep" aria-hidden="true">·</span>
+  <a href="https://epstein-data.com">epstein-data.com</a>
+</footer>
+
+</body>
+</html>
